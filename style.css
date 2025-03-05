@@ -80,12 +80,14 @@ button{
 .btn-outline{
     background-color: white;
     color: #5978FF;
+    transition: all .3s ease-in-out;
     border: 1px solid #5978FF;
 }
 .btn-fill{
     background-color: #5978FF;
     color: white;
-    border: none;
+    transition: all .3s ease-in-out;
+    border: 1px solid #5978FF;
 }
 .head-all{
     font-family:  Gilroy-Medium;
@@ -157,19 +159,23 @@ button{
     display: flex;
     gap:16px;
 }
+
 .verified-tick div{
     display: flex;
     gap: 10px;
     margin: 2px;
+}
+
+.verified-tick div img,.verified-tick img{
+    width: 24px;
+    height: 24px;
 }
 .continer2{
     text-align: center;
     padding: 150px 0;
 }
 .continer2 iframe{
-    max-width: 1022px;
-    width: 100%;
-    height: 500px;
+    width: 60%;
     border: none;
     border-radius: 12px;
 }
@@ -267,12 +273,12 @@ button{
     background-color: white;
     width: 100%;
 }
-.card-con4 p img , #nm-rate p img{
+.card-con4 p img , #nm-rate p img,.spl p img{
     margin-right: 5px;
     vertical-align:-2px;
 }
-#nm-rate p img{
-    vertical-align:-4px;
+#nm-rate p img,.spl p img{
+    vertical-align:-3.5px;
 }
 .card-con4 p{
     font-family: Gilroy-Medium;
@@ -294,7 +300,7 @@ button{
 .spl p{
     font-family: Gilroy-Medium;
     font-weight: 400;
-    font-size: 13px;
+    font-size: .75rem;
     line-height: 20px;
     color: #555555;
 }
@@ -316,6 +322,7 @@ button{
     line-height: 22px;
     font-size: 16px;
     font-weight: 600;
+    padding: 10px 10px !important;
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
@@ -388,9 +395,12 @@ button{
     display: flex;
     position: relative;
     flex-direction: column;
+    margin-top: 60px;
     align-items: center;
     justify-content: space-between;
     background-color: #F0F9FA;
+    max-width: 300px;
+    min-width: 300px;
     border-radius: 12px;
     padding: 70px 24px;
     gap: 15px;
@@ -431,6 +441,14 @@ button{
 #cards6 div:nth-child(3){
  background-color: #ECF1FB;
  
+}
+#cards6{
+    display: flex;
+    gap: 20px;
+    width: 65%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 .rat1 .star-checked {
     color: #0D8990;
@@ -545,13 +563,41 @@ hr{
     justify-content: space-between;
     gap: 40px;
 }
-
+a{
+    transition: all .3s ease;
+}
+a:hover{
+    color: #c0761c !important;
+}
+.btn-outline:hover {
+    background-color: #5978FF;
+    color: white;
+  }
+.btn-fill:hover {
+    background-color: #ffffff;
+    color: #5978FF; 
+}
 @media screen and (max-width: 650px){
     header ul{
         display: none;
+
+    }
+    iframe{
+        width: 90% !important;
+        min-height: 200px !important;
     }
     .continer1{
-        padding: 130px 20px 180px 20px;
+        padding: 130px 20px 80px 20px;
+    }
+    .con5-right{
+        margin-top: 50px;
+    }
+    .con5-right img{
+        width: 100%;
+    }
+    .verified-tick div p{
+        font-size: 11px;
+        font-weight: 800;
     }
     .con1-left h1{
         font-size: 36px;
@@ -561,19 +607,13 @@ hr{
         font-size: 16px;
     }
     .continer2{
-        padding: 150px 20px;
-    }
-    .continer2 iframe{
-        height: 400px;
+        padding: 80px 0px;
     }
     .continer3{
-        padding: 100px 20px;
-    }
-    .con3-cards{
-        grid-template-columns: repeat(1,minmax(300px,1fr));
+        padding: 80px 0;
     }
     .continer4{
-        padding: 100px 20px;
+        padding: 80px 0px;
     }
     .cards-con4{
         grid-template-columns: repeat(1,minmax(200px,300px));
@@ -585,23 +625,34 @@ hr{
         flex-direction: column;
     }
     .continer6{
-        padding: 75px 20px;
+        padding: 75px 10px;
     }
     #card-con6 img{
-        top: -15%;
         width: 40%;
     }
-    #card-con6 {
-        margin-top: 50px;
+    #card-con6{
+        min-width: 250px;
     }
     .continer7{
-        padding: 75px 20px;
+        padding: 75px 0px;
     }
     #card-con7{
         min-width: 85%;
         gap: 25px;
     }
+    #cards6{
+        width: 95%;
+    }
+    #cards7{
+        width: 100% !important;
+    }
     footer{
-        padding: 80px 80px;
+        padding: 80px 30px;
+    }
+    button{
+        font-size: 12px;
+        line-height: 14px;
+        padding: 10px 15px;
+        border-radius: 8px;
     }
 }
