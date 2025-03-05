@@ -211,6 +211,9 @@ button{
 }
 .continer4{
     text-align: center;
+    background-image: url('src/img/Grid-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .cards-con4{
     display: grid;
@@ -318,4 +321,47 @@ button{
     border-radius: 4px;
     top: 30px;
     left: 20px;
+}
+.step-con{
+    padding: 0;
+}
+.step-con p{
+    font-family: Gilroy-Medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #555555;
+}
+#step-head{
+    font-family: Gilroy-Bold;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #121214;
+    padding: 12px 0;
+}
+#step{
+    padding: 5px 12px;
+    border-radius: 24px;
+    max-width: fit-content;
+    background-color: #CBF2E0;
+}
+#step p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color:#008545;
+}
+.continer5{
+    text-align: center;
+    background:url('src/img/bg-con4.png') no-repeat;
+    background-position: 10px -60px;
+    padding: 75px 0;
+}
+.con5-step-img{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+    padding: 0;
 }
