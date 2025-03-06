@@ -648,7 +648,7 @@ a:hover{
         width: 95%;
     }
     #cards7{
-        width: 100% !important;
+        max-width: 100% !important;
     }
     footer{
         padding: 80px 30px;
