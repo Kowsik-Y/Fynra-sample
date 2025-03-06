@@ -23,59 +23,24 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-    justify-content:space-around;
-    padding: 15px 0;
-    z-index: 1000;
-    background-color: #ffffff;
-    border: 1px solid #EBEBEB;
-    width: 100%;
-    position: fixed;
-}
+
 a{
     text-decoration: none;
-    color: black;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    gap:5px;
-}   
-.logo h2{
-        font-weight: 600;
-        font-size: 18px ;
-        font-style: normal;
-        color: #383E54;
-}
-header ul{
-    
-        font-weight: 500;
-        font-size: 16px ;
-        font-style: normal;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap:32px;
-}
-header ul li a{
     color: #555555;
+    transition: all .3s ease;
 }
-header ul li .active{
-    font-weight: 600;
-    color: #F8971F;
-} 
-.login-start{
-    display: flex;
-    gap: 15px;
-} 
+ul{
+    font-weight: 500;
+    font-style: normal;
+    list-style: none;
+}
 button{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 10px;
+    cursor: pointer;
 }
 .btn-outline{
     background-color: white;
@@ -89,6 +54,25 @@ button{
     transition: all .3s ease-in-out;
     border: 1px solid #5978FF;
 }
+.btn-big{
+    font-family: Gilroy-semibold;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 208px;
+    padding : 20px 30px ;
+}
+.btn-none{
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.btn-none span{
+    margin-left: 5px;
+    vertical-align: -6px;
+}
 .head-all{
     font-family:  Gilroy-Medium;
     font-weight: 600;
@@ -96,13 +80,56 @@ button{
     color: #121214;
     padding: 0 0 50px 0;
 }
-.continer1{
+.con-comman{
+    padding: 120px 50px 80px 50px;
+    text-align: center;
+}
+header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
+    width: 100%;
+    position: sticky;
+    padding: 15px 0;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: 1px solid #EBEBEB;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}   
+.logo h2{
+        font-weight: 600;
+        font-size: 18px ;
+        font-style: normal;
+        color: #383E54;
+}
+header ul{
+    font-size: 16px ;
+    display: flex;
+    align-items: center;
+    gap:32px;
+}
+.active{
+    font-weight: 600;
+    color: #F8971F;
+} 
+.login-start{
+    display: flex;
+    gap: 15px;
+} 
+
+.continer1{
+    text-align: start !important;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     background-color: #F7F9FF;
-    padding: 130px 50px 180px 50px;
 }
 .con1-left{
+    font-family: Gilroy-Bold;
     max-width: 545px;
     width: 100%;
     display: flex;
@@ -111,7 +138,6 @@ button{
 }
 
 .con1-left h1{
-    font-family: Gilroy-Bold;
     font-size: 48px;
     line-height: 64px;
     color: #121214;
@@ -120,7 +146,6 @@ button{
     position: relative;
 }
 .con1-left h1 span{
-    font-family: Gilroy-Bold;
     color: #5978FF;
 }
 .con1-left p{
@@ -148,52 +173,40 @@ button{
     bottom: 0;
     right: 10px;
 }
-.btn-big{
-    font-family: Gilroy-semibold;
-    font-size: 18px;
-    line-height: 24px;
-    max-width: 208px;
-    padding : 20px 30px ;
-}
-.verified-tick{
-    display: flex;
-    gap:16px;
+.con1img img{
+    width: 100%;
+    height: 100%;
 }
 
+.verified-tick{
+    display: flex;
+    gap:15px;
+}
 .verified-tick div{
     display: flex;
-    gap: 10px;
-    margin: 2px;
+    gap: 12px;
 }
 
 .verified-tick div img,.verified-tick img{
     width: 24px;
     height: 24px;
 }
-.continer2{
-    text-align: center;
-    padding: 150px 0;
-}
+
 .continer2 iframe{
     width: 60%;
     border: none;
     border-radius: 12px;
 }
 .continer3{
-    padding: 100px 0;
-
-    text-align: center;
     background-color: #F7F9FF;
 }
 .con3-cards{
     display: flex;
-    text-align:start;
-    
     flex-wrap: wrap;
-    justify-content: space-between;
     justify-content: center;
-    gap: 70px;
-    max-width: 80%;
+    text-align:start;
+    max-width: 90%;
+    gap: 50px;
     margin:50px auto;
 }
 .con3-card{
@@ -221,25 +234,31 @@ button{
     border-radius: 12px;
 }
 .continer4{
-    text-align: center;
+    font-family: Gilroy-Medium;
+    font-weight: 400;
     background-image: url('src/img/Grid-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #F7F9FF;
 }
 .cards-con4{
-    display: grid;
-    grid-template-columns: repeat(3,minmax(200px,300px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 0 auto;
     gap: 20px;
-    position: relative;
-    padding: 0 0 50px;
 }
-.credit-btn p{
-    font-family: Gilroy-Medium;
-    font-weight: 400;
+.card-con4{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 8px;
+    border-radius: 12px;
+    background-color: white;
+    max-width: 320px;
 }
 #nm-rate{
-    font-family: Gilroy-Medium;
     display: flex;
     justify-content: space-between;
 }
@@ -258,30 +277,15 @@ button{
     color: white;
     background-color: #008545;
 }
-.continer4{
-    text-align: center;
-    background-color: #F7F9FF;
-    padding: 100px 0;
-}
-.card-con4{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 8px;
-    border-radius: 12px;
-    background-color: white;
-    width: 100%;
-}
+
 .card-con4 p img , #nm-rate p img,.spl p img{
-    margin-right: 5px;
+    margin-right: 3px;
     vertical-align:-2px;
 }
 #nm-rate p img,.spl p img{
     vertical-align:-3.5px;
 }
 .card-con4 p{
-    font-family: Gilroy-Medium;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -293,14 +297,14 @@ button{
 .spl{
     background-image: linear-gradient(90deg, #f8961f38, #F8F8F83D);
     border-radius: 8px;
-    padding: 8px 10px;
-    width: fit-content;
-    height: 32px;
+    padding: 4px 10px;
+    width: 100%;
+    height: fit-content;
 }
 .spl p{
     font-family: Gilroy-Medium;
     font-weight: 400;
-    font-size: .75rem;
+    font-size: .8rem;
     line-height: 20px;
     color: #555555;
 }
@@ -318,18 +322,7 @@ button{
     font-size: 15px;
     color: #0D1226;
 }
-.btn-none{
-    line-height: 22px;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px 10px !important;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-}
-.btn-none span{
-    margin-left: 5px;
-    vertical-align: -6px;
-}
+
 #tag-top{
     position: absolute;
     color: #383E54;
@@ -374,10 +367,8 @@ button{
     color:#008545;
 }
 .continer5{
-    text-align: center;
     background:url('src/img/bg-con4.png') no-repeat;
     background-position: 10px -60px;
-    padding: 75px 0;
 }
 .con5-step-img{
     display: flex;
@@ -387,7 +378,6 @@ button{
 }
 
 .continer6{
-    padding:75px 0 ;
     background: none;
 }
 
@@ -465,24 +455,9 @@ button{
     color: #0B3388;
 }
 .continer7{
-    padding: 75px 0;
-    background-image: none;
     background-color: #F7F9FF;
 }
-#card-con7{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    background: none;
-    border-radius: 12px;
-    padding: 0;
-    max-width: 400px;
-    min-width: 40%;
-    gap: 25px;
-}
-.continer7 #cards7{
+#cards7{
     display: flex !important;
     overflow-x: scroll;
     justify-content: start !important;
@@ -492,6 +467,18 @@ button{
     margin: 0 auto;
     text-align: start;
 }
+#card-con7{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background: none;
+    border-radius: 12px;
+    max-width: 400px;
+    min-width: 40%;
+    gap: 25px;
+}
+
 #card-con7 img{
     width: 100%;
 }
@@ -513,14 +500,14 @@ footer{
     font-size: 14px;
     line-height: 22px;
     color: #C0C0C0;
+    padding: 80px 40px;
+    text-align:start !important;
     background-color: #0D1226;
-    padding: 80px 150px;
 }
 .link{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content:space-around;
     
 }
 .flexfoot{
@@ -542,7 +529,6 @@ footer{
 }
 .quicklinks ul li{
     margin-bottom: 45px;
-    list-style: none;
     padding: 5px 0;
 }
 .foothead{
@@ -555,16 +541,13 @@ footer{
 .quicklinks ul li a{
     color: #C0C0C0;
 }
-hr{
- margin: 50px 0;
-}
 .right,.right div {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
-a{
-    transition: all .3s ease;
+hr{
+ margin: 50px 0;
 }
 a:hover{
     color: #c0761c !important;
@@ -577,29 +560,32 @@ a:hover{
     background-color: #ffffff;
     color: #5978FF; 
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 750px){
     header ul{
         display: none;
 
+    }
+    header{
+        justify-content:space-between;
+        padding: 15px 10px;
     }
     iframe{
         width: 90% !important;
         min-height: 200px !important;
     }
-    .continer1{
-        padding: 130px 20px 80px 20px;
+    .con-comman{
+        padding: 80px 30px 80px 30px;
     }
     .con5-right{
-        margin-top: 50px;
+        margin-bottom: 40px;
     }
     .con5-right img{
-        width: 100%;
+        width: 80%;
     }
     .verified-tick div p{
         font-size: 11px;
         font-weight: 800;
     }
-
     .con1-left h1{
         font-size: 36px;
         line-height: 48px;
@@ -607,35 +593,15 @@ a:hover{
     .con1-left p{
         font-size: 16px;
     }
-    .continer2{
-        padding: 80px 0px;
+    .con5-step-img,.continer1  {
+        flex-direction: column-reverse;
     }
-    .continer3{
-        padding: 80px 0;
-    }
-    .continer4{
-        padding: 80px 0px;
-    }
-    .cards-con4{
-        grid-template-columns: repeat(1,minmax(200px,300px));
-    }
-    .continer5{
-        padding: 75px 20px;
-    }
-    .con5-step-img{
-        flex-direction: column;
-    }
-    .continer6{
-        padding: 75px 10px;
-    }
+
     #card-con6 img{
         width: 40%;
     }
     #card-con6{
         min-width: 250px;
-    }
-    .continer7{
-        padding: 75px 0px;
     }
     #card-con7{
         min-width: 85%;
