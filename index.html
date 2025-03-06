@@ -374,17 +374,17 @@
         </div>
     </footer>
     <script>
-        function scrollfun(continerbox,widthdiv){
-            const {scrollLeft,scrollWidth,clientWidth }=continerbox;
+        const colorFill = document.querySelector("#progessBar2");
+        const conBox = document.querySelector("#cards7");
+        const colorFill1 = document.querySelector("#progessBar1");
+        const conBox1 = document.querySelector("#cards6");
+        conBox1.addEventListener('scroll',function(){scrollfun(conBox1,colorFill1)});
+        conBox.addEventListener('scroll',function(){scrollfun(conBox,colorFill)});
+        function scrollfun(conBoxover,colorWidth){
+            const {scrollLeft,scrollWidth,clientWidth }=conBoxover;
             const scrollpre= Math.ceil(( scrollLeft / (scrollWidth - clientWidth)) * 100);
-            widthdiv.style.width=`${scrollpre}%`;
+            colorWidth.style.width=`${scrollpre}%`;
         }
-        const progressBar = document.querySelector("#progessBar2");
-        const scrollCon = document.querySelector("#cards7");
-        const progressBar1 = document.querySelector("#progessBar1");
-        const scrollCon1 = document.querySelector("#cards6");
-        scrollCon1.addEventListener('scroll',function(){scrollfun(scrollCon1,progressBar1)});
-        scrollCon.addEventListener('scroll',function(){scrollfun(scrollCon,progressBar)});
     </script>
 </body>
 </html>
