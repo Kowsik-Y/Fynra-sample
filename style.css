@@ -400,12 +400,16 @@ iframe{
 }
 .con5-step-img{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:clamp(20px,2.5vw,50px);
     text-align: start;
     padding: 0;
 }
 
 .continer6{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: none;
 }
 
@@ -462,6 +466,7 @@ iframe{
 }
 #cards6{
     display: flex;
+    justify-self: center;
     gap: 20px;
     width: 65%;
     margin: 0 auto;
