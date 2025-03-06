@@ -537,7 +537,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: clamp(30px,5vw,70px);
 }
 .flexfoot{
     display: flex;
