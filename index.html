@@ -14,7 +14,7 @@
     <header>
         <a href="#">
         <div class="logo">
-            <img src="src/svg/Logo.svg" alt="Fynro">
+            <img src="src/svg/Logo.svg" style="user-select: none;-webkit-user-drag: none;"  alt="Fynro">
             <h2>Fynro</h2>
         </div></a>
         <ul>
@@ -41,12 +41,17 @@
                     <button class="btn-fill btn-big">Explore Advisors</button>
             </div>
             <div class="con5-right con1img">
-                <img src="src/svg/con1-img.svg" style="user-select: none;-webkit-user-drag: none;" alt="loadError">
+                <img src="src/svg/con1img(2).svg" style="user-select: none;-webkit-user-drag: none;" alt="loadError">
             </div>
         </div>
         <div class="continer2 con-comman">
             <h2 class="head-all">Watch Our Actions</h2>
-            <iframe  height="400"  src="https://www.youtube.com/embed/yctQRe--q6c?si=BJ1h3RBsDmojuj1t" allowfullscreen></iframe>
+            <div>
+                <iframe  src="https://www.youtube.com/embed/yctQRe--q6c?si=BJ1h3RBsDmojuj1t" allowfullscreen>
+                </iframe>
+                <p>SLANDER - Love Is Gone (ft. Dylan Matthew) [Official Music Video]</p>
+            </div>
+           
         </div>
         <div class="continer3 con-comman">
             <h2 class="head-all">What do we solve for you? </h2>
@@ -271,6 +276,9 @@
                 </div>
 
             </div>
+            <div class="scroll-progess">
+                <div class="progess-bar" id="progessBar1"></div>
+            </div>
         </div>
 
         <div class="continer7 con-comman">
@@ -305,6 +313,10 @@
                     </div>
                     
                 </div>
+                <div class="scroll-progess">
+                    <div class="progess-bar"id="progessBar2">
+                    </div>
+                </div>
             </div>
     </main>
     <!-- footer -->
@@ -312,14 +324,16 @@
         <div class="link">
             <div class="social flexfoot">
                 <div class="logo">
-                    <img src="src/svg/Logo.svg" alt="Fynro">
+                    <img src="src/svg/Logo.svg" style="user-select: none;-webkit-user-drag: none;filter:brightness(0) invert(100%);" alt="Fynro">
                     <h2>Fynro</h2>
                 </div>
                 <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
                 <div>
                     <a href="#">
-                        <img style="margin-right: 10px;" src="src/svg/facebook.svg" alt="facebook">
-                    <img src="src/svg/you_tube.svg" alt="">
+                        <img style="margin-right: 10px;user-select: none;-webkit-user-drag: none;" src="src/svg/facebook.svg" alt="facebook">
+                        <img style="margin-right: 10px;user-select: none;-webkit-user-drag: none;"  src="src/svg/twitter.svg" alt="twitter">
+                        <img style="margin-right: 10px;user-select: none;-webkit-user-drag: none;" src="src/svg/linkdin.svg" alt="twitter">
+                        <img style="margin-right: 10px;user-select: none;-webkit-user-drag: none;"  src="src/svg/youtube(2).svg" alt="youtube">
                     </a>
                     
                 </div>
@@ -339,24 +353,38 @@
                 <h3 class="head-all foothead">
                     Advisor Portal
                 </h3>
-                <p>Become a Advisor</p>
-                <p>Sign in as Advisor</p>
+                <a href="#"><p>Become a Advisor</p></a>
+                <a href="#"><p>Sign in as Advisor</p></a>
             </div>
             <div class="contact flexfoot">
                 <h3 class="head-all foothead">
                     Contact info
                 </h3>
-                <p>fynro.info.co.us</p>
-                <p>+91 77086-54343</p>
-                <p>1642 Sunrise Avenue, Neelangarai, Chennai , 600115</p>
+                <a href="#"><p>fynro.info.co.us</p></a>
+                <a href="#"><p>+91 77086-54343</p></a>
+                <a href="#"><p>1642 Sunrise Avenue, Neelangarai, Chennai , 600115</p></a>
             </div>
         </div>
         <hr>
         <div class="right">
 <p>Fynro© 2024 All Rights Reserved</p>
-    <div><p>Privacy policy</p>
-    <p>Terms of use</p></div>
+    <div><p><a href="#">Privacy policy</a>
+    </p>
+    <p><a href="#">Terms of use</a></p></div>
         </div>
     </footer>
+    <script>
+        function scrollfun(continerbox,widthdiv){
+            const {scrollLeft,scrollWidth,clientWidth }=continerbox;
+            const scrollpre= Math.ceil(( scrollLeft / (scrollWidth - clientWidth)) * 100);
+            widthdiv.style.width=`${scrollpre}%`;
+        }
+        const progressBar = document.querySelector("#progessBar2");
+        const scrollCon = document.querySelector("#cards7");
+        const progressBar1 = document.querySelector("#progessBar1");
+        const scrollCon1 = document.querySelector("#cards6");
+        scrollCon1.addEventListener('scroll',function(){scrollfun(scrollCon1,progressBar1)});
+        scrollCon.addEventListener('scroll',function(){scrollfun(scrollCon,progressBar)});
+    </script>
 </body>
 </html>

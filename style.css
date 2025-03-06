@@ -58,8 +58,8 @@ button{
     font-family: Gilroy-semibold;
     font-size: 18px;
     line-height: 24px;
-    max-width: 208px;
-    padding : 20px 30px ;
+    width: fit-content;
+    padding : 17px 30px ;
 }
 .btn-none{
     line-height: 22px;
@@ -191,11 +191,35 @@ header ul{
     width: 24px;
     height: 24px;
 }
-
-.continer2 iframe{
-    width: 60%;
+.continer2{
+    position: relative;
+}
+.continer2 div{
+    margin: auto;
+    width: 70%;
+    position: relative; 
     border: none;
+    background-color: #0D1226;
     border-radius: 12px;
+}
+iframe{
+    width: 100%;
+    max-height:400px;
+    min-height:400px;
+    border-radius: 12px;
+    border: none;
+}
+.continer2 div p{
+    text-align: start;
+    padding: 20px 45px;
+    bottom: 0;
+    z-index: 10;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 26px;
+    width: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 .continer3{
     background-color: #F7F9FF;
@@ -496,6 +520,7 @@ footer{
     font-family: Gilroy-Medium;
     font-weight: 400;
     display: grid;
+    justify-content: center;
     align-content: space-between;
     font-size: 14px;
     line-height: 22px;
@@ -506,13 +531,14 @@ footer{
 }
 .link{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content:space-around;
-    
+    gap: 50px;
 }
 .flexfoot{
     display: flex;
     flex-direction: column;
+    justify-self: start;
     height: fit-content;
     gap: 50px;
 }
@@ -524,15 +550,15 @@ footer{
     max-width: 310px;
     width: fit-content;
 }
-.social{
-    color:#9497A1;
-}
 .quicklinks ul li{
     margin-bottom: 45px;
     padding: 5px 0;
 }
+.flexfoot a p ,.right div p a{
+    color: #C0C0C0 ;
+}
 .foothead{
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     padding: 0 !important;
@@ -552,13 +578,18 @@ hr{
 a:hover{
     color: #c0761c !important;
 }
-.btn-outline:hover {
-    background-color: #5978FF;
-    color: white;
-  }
-.btn-fill:hover {
-    background-color: #ffffff;
-    color: #5978FF; 
+.scroll-progess{
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 50px auto;
+    background-color: #ccc;
+}
+.progess-bar{
+    width: 0%;
+    border-radius: 5px;
+    background-color: black;
+    height: 5px;
 }
 @media screen and (max-width: 750px){
     header ul{
@@ -569,10 +600,6 @@ a:hover{
         justify-content:space-between;
         padding: 15px 10px;
     }
-    iframe{
-        width: 90% !important;
-        min-height: 200px !important;
-    }
     .con-comman{
         padding: 80px 30px 80px 30px;
     }
@@ -582,9 +609,19 @@ a:hover{
     .con5-right img{
         width: 80%;
     }
+    .continer2 div{
+        width: 80%;
+    }
+    .continer2 div p{
+        padding: 20px 45px;
+        font-size: 18px;
+    }
     .verified-tick div p{
         font-size: 11px;
         font-weight: 800;
+    }
+    iframe{
+        min-height: 200px !important;
     }
     .con1-left h1{
         font-size: 36px;
