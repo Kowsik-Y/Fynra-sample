@@ -11,6 +11,9 @@
     font-family: Gilroy-semibold;
     src: url('gilroy/Gilroy-SemiBold.ttf');
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -216,6 +219,7 @@ iframe{
     z-index: 10;
     color: #ffffff;
     font-size: 18px;
+    font-size: clamp(.75rem, 3vw, 1rem);
     line-height: 26px;
     width: 100%;
     border-bottom-left-radius: 12px;
@@ -614,7 +618,6 @@ a:hover{
     }
     .continer2 div p{
         padding: 20px 45px;
-        font-size: 18px;
     }
     .verified-tick div p{
         font-size: 11px;
