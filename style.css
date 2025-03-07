@@ -571,8 +571,8 @@ footer{
     font-family: Gilroy-Medium;
     font-weight: 400;
     display: grid;
-    justify-content: center;
     align-content: space-between;
+    justify-content: center;
     font-size: 14px;
     line-height: 22px;
     color: #C0C0C0;
@@ -581,10 +581,25 @@ footer{
     background-color: #0D1226;
 }
 .link{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(4, 250px);
     gap: clamp(30px,5vw,70px);
+}
+@media screen and (max-width:1200px){
+    .link{
+        grid-template-columns: repeat(3, 250px);
+    }
+}
+@media screen and (max-width:992px){
+    .link{
+        grid-template-columns: repeat(2, 250px);
+    }
+}
+@media screen and (max-width:576px){
+    .link{
+        grid-template-columns: repeat(1, 250px);
+    }
 }
 .flexfoot{
     display: flex;
